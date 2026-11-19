@@ -31,6 +31,9 @@ a{color:inherit;text-decoration:none}
 .gallery figure:hover img{transform:scale(1.045)}
 .gallery-trio{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .gallery-pair{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.gallery-heading{grid-column:1/-1;display:flex;align-items:end;justify-content:space-between;gap:24px;padding:clamp(28px,5vw,58px) 0 16px;border-bottom:1px solid #ffffff25}
+.gallery-heading h2{font-size:clamp(30px,4vw,52px);letter-spacing:-.05em;line-height:1;margin:14px 0 0}
+.gallery-heading p{max-width:320px;margin:0;color:#9aafcc;font-size:14px;line-height:1.6}
 .gallery figure.pkg-card{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(24px,3vw,38px) clamp(20px,2.5vw,32px) 22px;aspect-ratio:1/1.06;border-radius:28px;border:1.5px solid rgba(255,255,255,.3);background:radial-gradient(circle at 50% 42%,rgba(169,203,255,.13) 0%,rgba(16,36,66,.5) 56%,rgba(6,19,41,.9) 100%);box-shadow:0 14px 34px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.12);will-change:transform;animation:pkgZoom 3.8s ease-in-out infinite;transition:transform .45s cubic-bezier(.22,1,.36,1),border-color .45s ease,box-shadow .45s ease,background .45s ease}
 .gallery-pair figure.pkg-card{aspect-ratio:1/1}
 .gallery-trio figure.pkg-card:nth-child(2){animation-delay:.6s}
@@ -61,7 +64,8 @@ footer{border-top:1px solid #ffffff25;color:#9aafcc;font-size:12px;padding:26px 
   .hero{padding:75px 0 45px}
   .intro{align-items:start;flex-direction:column}
   .gallery,.gallery-trio,.gallery-pair{grid-template-columns:1fr}
-  .gallery > figure:first-child,.gallery-trio,.gallery-pair{grid-column:auto}
+  .gallery > figure:first-child,.gallery-trio,.gallery-pair,.gallery-heading{grid-column:auto}
+  .gallery-heading{align-items:start;flex-direction:column;gap:14px}
   .details{grid-template-columns:1fr;padding:65px 0}
   .project-nav{padding-bottom:60px}
 }
@@ -70,7 +74,7 @@ footer{border-top:1px solid #ffffff25;color:#9aafcc;font-size:12px;padding:26px 
   .gallery figure img,.gallery figure.pkg-card{transition:none}
   .gallery figure:hover img,.gallery figure.pkg-card:hover,.gallery figure.pkg-card:hover img{transform:none}
 }
-</style>
+.project-review{margin:0 0 64px;background:linear-gradient(180deg,#0d1f3d 0%,#09162e 100%);border:1px solid #ffffff1f;border-radius:22px;padding:clamp(24px,3.2vw,34px);transition:border-color .35s ease,transform .35s ease,box-shadow .35s ease}.project-review:hover{border-color:#3b9eff6e;transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,.35)}.pr-top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:16px}.pr-user{display:flex;align-items:center;gap:12px}.pr-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#66ccf7,#4aaef0);color:#061329;font-size:16px;font-weight:800;display:grid;place-items:center;flex:none}.pr-user strong{display:block;font-size:15px;color:#fff}.pr-user span{display:block;font-size:12px;color:#8fa6c4;margin-top:2px}.pr-meta{display:flex;align-items:center;gap:12px}.pr-stars{display:inline-flex;gap:3px;color:#f5b301;font-size:15px;letter-spacing:1px}.pr-badge{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#3b9eff}.pr-quote{margin:0 0 22px;font-size:clamp(18px,2.1vw,23px);line-height:1.45;color:#eef5ff;letter-spacing:-.02em}.pr-quote::before{content:"\201C";color:#73d2f6;font-family:Georgia,serif;font-size:1.35em;margin-right:6px;vertical-align:-.08em}.pr-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.pr-pill{display:inline-block;font-size:12px;font-weight:600;color:#5baeff;background:rgba(30,109,240,.1);border:1px solid #1e6df0b3;border-radius:999px;padding:6px 14px}.pr-all{font-size:12px;font-weight:700;color:#a9cbff;border-bottom:1px solid #a9cbff66;padding-bottom:3px}.pr-all:hover{color:#fff;border-color:#fff}@media(prefers-reduced-motion:reduce){.project-review{transition:none}.project-review:hover{transform:none}}</style>
 </head>
 <body>
 <header class="wrap">
@@ -85,11 +89,41 @@ footer{border-top:1px solid #ffffff25;color:#9aafcc;font-size:12px;padding:26px 
     <h1>Packaging<br>&amp; Branding.</h1>
     <div class="intro">
       <p>A curated collection of product packaging and brand presentation designs by Muhammad Hamza.</p>
-      <span class="number">10 designs</span>
+      <span class="number">18 designs</span>
     </div>
   </section>
   <div class="gallery">
     <figure id="fome-packaging"><img src="../assets/stone-bird-packaging.jpg" alt="Fome product packaging designs — Tile &amp; Grout Cleaner, Marble Polish, Metal Cleaner &amp; Shiner" loading="eager"></figure>
+    <header class="gallery-heading" id="packaging-collection">
+      <div>
+        <div class="eyebrow"><span class="dot"></span>Packaging collection · 08 designs</div>
+        <h2>Packaging in every form.</h2>
+      </div>
+      <p>From gift boxes and coffee packs to retail tags and beauty packaging.</p>
+    </header>
+    <div class="gallery-pair">
+      <figure id="luxury-gift-packaging" class="pkg-card"><img src="../assets/luxury-gift-packaging.png" width="795" height="693" alt="Luxury gift box with a satin ribbon, folded fabric and matching stationery" loading="lazy" decoding="async"><figcaption>Luxury · Gift Box &amp; Collateral</figcaption></figure>
+      <figure id="clouds-orange-black-mailers" class="pkg-card"><img src="../assets/clouds-orange-black-mailers.png" width="880" height="580" alt="Clouds Packaging orange and black branded mailer boxes" loading="lazy" decoding="async"><figcaption>Clouds Packaging · Orange &amp; Black Mailers</figcaption></figure>
+    </div>
+    <div class="gallery-pair">
+      <figure id="clouds-black-boxes" class="pkg-card"><img src="../assets/clouds-black-boxes.png" width="1328" height="888" alt="Clouds Packaging black branded boxes shown from three angles" loading="lazy" decoding="async"><figcaption>Clouds Packaging · Black Box Collection</figcaption></figure>
+      <figure id="clouds-beauty-packaging" class="pkg-card"><img src="../assets/clouds-beauty-packaging.png" width="1400" height="985" alt="Clouds Packaging coral sleeve and green beauty boxes with cosmetic bottles" loading="lazy" decoding="async"><figcaption>Clouds Packaging · Beauty Boxes</figcaption></figure>
+    </div>
+    <div class="gallery-pair">
+      <figure id="clouds-coffee-packaging" class="pkg-card"><img src="../assets/clouds-coffee-packaging.png" width="1400" height="1034" alt="Clouds Packaging coffee bag, takeaway cup and coffee beans" loading="lazy" decoding="async"><figcaption>Clouds Packaging · Coffee Packaging</figcaption></figure>
+      <figure id="clouds-branded-tags" class="pkg-card"><img src="../assets/clouds-branded-tags.png" width="900" height="690" alt="Clouds Packaging branded orange and yellow hang tags" loading="lazy" decoding="async"><figcaption>Clouds Packaging · Branded Tags</figcaption></figure>
+    </div>
+    <div class="gallery-pair">
+      <figure id="clouds-kraft-packaging" class="pkg-card"><img src="../assets/clouds-kraft-packaging.png" width="1054" height="787" alt="Clouds Packaging kraft mailer box and paper bag" loading="lazy" decoding="async"><figcaption>Clouds Packaging · Kraft Packaging</figcaption></figure>
+      <figure id="clouds-food-retail-packaging" class="pkg-card"><img src="../assets/clouds-food-retail-packaging.png" width="1000" height="827" alt="Clouds Packaging takeaway noodle carton and branded retail box" loading="lazy" decoding="async"><figcaption>Clouds Packaging · Food &amp; Retail Boxes</figcaption></figure>
+    </div>
+    <header class="gallery-heading">
+      <div>
+        <div class="eyebrow"><span class="dot"></span>Product packaging</div>
+        <h2>Fome &amp; Stonebird.</h2>
+      </div>
+      <p>Labels, bottles, pouches and bags designed for shelf presence.</p>
+    </header>
     <div class="gallery-trio">
       <figure id="fome-tile-grout-cleaner" class="pkg-card"><img src="../assets/fome-tile-grout-cleaner.png" alt="Fome by Stonebird — Tile &amp; Grout Cleaner 500ml bottle packaging design" loading="lazy"><figcaption>Fome · Tile &amp; Grout Cleaner</figcaption></figure>
       <figure id="fome-marble-polish" class="pkg-card"><img src="../assets/fome-marble-polish.png" alt="Fome by Stonebird — Marble Polish 300ml bottle packaging design" loading="lazy"><figcaption>Fome · Marble Polish</figcaption></figure>
@@ -118,7 +152,7 @@ footer{border-top:1px solid #ffffff25;color:#9aafcc;font-size:12px;padding:26px 
       <p>Packaging layouts, label systems, and 3D product mockups from Muhammad Hamza’s portfolio — designed for clarity, impact, and shelf presence.</p>
     </div>
   </section>
-  <nav class="project-nav" aria-label="Portfolio navigation">
+  <section class="project-review" aria-label="Client testimonial"><div class="pr-top"><div class="pr-user"><span class="pr-avatar" aria-hidden="true">U</span><div><strong>Usama Farooq</strong><span>Client testimonial</span></div></div><div class="pr-meta"><span class="pr-stars" aria-label="5 out of 5 stars">★★★★★</span><span class="pr-badge">CLIENT</span></div></div><p class="pr-quote">The packaging design looks premium and perfectly represents our product.</p><div class="pr-foot"><span class="pr-pill">Packaging &amp; Print Design</span><a class="pr-all" href="../index.html#testimonials">See all 39 client reviews ↗</a></div></section><nav class="project-nav" aria-label="Portfolio navigation">
     <a href="../index.html#work"><small>← Portfolio</small>Selected work</a>
     <a class="next" href="../index.html#contact"><small>Start a project →</small>Let’s talk</a>
   </nav>
